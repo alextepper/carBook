@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "image": "https://via.placeholder.com/150",
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2020,
+    "price": 24000,
+    "score": 4.5
+  },
+  {
+    "id": 2,
+    "image": "https://via.placeholder.com/150",
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2019,
+    "price": 22000,
+    "score": 4.6
+  },
+  {
+    "id": 3,
+    "image": "https://example.com/ford_f150.jpg",
+    "make": "Ford",
+    "model": "F-150",
+    "year": 2021,
+    "price": 30000,
+    "score": 4.7
+  },
+  {
+    "id": 4,
+    "image": "https://example.com/chevrolet_silverado.jpg",
+    "make": "Chevrolet",
+    "model": "Silverado",
+    "year": 2018,
+    "price": 28000,
+    "score": 4.4
+  },
+  {
+    "id": 5,
+    "image": "https://example.com/tesla_model3.jpg",
+    "make": "Tesla",
+    "model": "Model 3",
+    "year": 2020,
+    "price": 35000,
+    "score": 4.8
+  },
+  {
+    "id": 6,
+    "image": "https://example.com/bmw_3series.jpg",
+    "make": "BMW",
+    "model": "3 Series",
+    "year": 2019,
+    "price": 37000,
+    "score": 4.7
+  },
+  {
+    "id": 7,
+    "image": "https://example.com/audi_a4.jpg",
+    "make": "Audi",
+    "model": "A4",
+    "year": 2021,
+    "price": 40000,
+    "score": 4.9
+  },
+  {
+    "id": 8,
+    "image": "https://example.com/mercedes_cclass.jpg",
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "year": 2018,
+    "price": 42000,
+    "score": 4.6
+  },
+  {
+    "id": 9,
+    "image": "https://example.com/lexus_es.jpg",
+    "make": "Lexus",
+    "model": "ES",
+    "year": 2020,
+    "price": 38000,
+    "score": 4.7
+  },
+  {
+    "id": 10,
+    "image": "https://example.com/subaru_outback.jpg",
+    "make": "Subaru",
+    "model": "Outback",
+    "year": 2019,
+    "price": 32000,
+    "score": 4.5
+  }
+]

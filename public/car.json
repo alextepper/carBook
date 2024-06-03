@@ -1,0 +1,64 @@
+{
+  "car": {
+    "id": 1,
+    "make": "Toyota",
+    "model": "Supra",
+    "year": 2022,
+    "generation": "A91 Edition",
+    "configuration": "Premium",
+    "mileage": 14938,
+    "location": "Lincolnwood, IL",
+    "description": "A well-maintained car in excellent condition.",
+    "previousOwners": 1,
+    "price": 63000,
+    "image": "https://mma.prnewswire.com/media/2187893/2024_GRSupra_45thAnniversaryEd_MikanBlast_H.jpg?p=publish",
+    "gearbox": "8-Speed Automatic",
+    "engineVolume": "3.0L I-6 gasoline direct injection, DOHC, variable valve control",
+    "fuelType": "Gasoline",
+    "horsepower": 335,
+    "averageAnnualMaintenanceCost": 500,
+    "fuelConsumption": "22-30 MPG"
+  },
+  "similarCars": [
+    {
+      "id": 2,
+      "make": "Toyota",
+      "model": "Supra",
+      "year": 2021,
+      "image": "https://di-uploads-pod19.dealerinspire.com/balisetoyotaofwarwick/uploads/2023/08/Screen-Shot-2023-08-04-at-1.57.18-PM.png",
+      "price": 60000,
+      "mileage": 10000,
+      "location": "Chicago, IL"
+    },
+    {
+      "id": 3,
+      "make": "Toyota",
+      "model": "Supra",
+      "year": 2020,
+      "image": "https://di-uploads-pod19.dealerinspire.com/balisetoyotaofwarwick/uploads/2023/08/Screen-Shot-2023-08-04-at-1.57.18-PM.png",
+      "price": 55000,
+      "mileage": 20000,
+      "location": "New York, NY"
+    },
+    {
+      "id": 4,
+      "make": "Toyota",
+      "model": "Supra",
+      "year": 2023,
+      "image": "https://di-uploads-pod19.dealerinspire.com/balisetoyotaofwarwick/uploads/2023/08/Screen-Shot-2023-08-04-at-1.57.18-PM.png",
+      "price": 65000,
+      "mileage": 5000,
+      "location": "Los Angeles, CA"
+    },
+    {
+      "id": 5,
+      "make": "Toyota",
+      "model": "Supra",
+      "year": 2019,
+      "image": "https://di-uploads-pod19.dealerinspire.com/balisetoyotaofwarwick/uploads/2023/08/Screen-Shot-2023-08-04-at-1.57.18-PM.png",
+      "price": 53000,
+      "mileage": 30000,
+      "location": "San Francisco, CA"
+    }
+  ]
+}
