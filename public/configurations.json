@@ -1,0 +1,166 @@
+{
+  "Camry": {
+    "2018-2022": {
+      "configurations": [
+        {
+          "name": "LE",
+          "averagePrice": 24000,
+          "score": 4.5,
+          "image": "https://example.com/toyota_camry_le.jpg",
+          "gearbox": "Automatic",
+          "engineVolume": "2.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 203,
+          "averageAnnualMaintenanceCost": 400,
+          "fuelConsumption": "7.5L/100km"
+        },
+        {
+          "name": "SE",
+          "averagePrice": 25000,
+          "score": 4.6,
+          "image": "https://example.com/toyota_camry_se.jpg",
+          "gearbox": "Automatic",
+          "engineVolume": "2.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 203,
+          "averageAnnualMaintenanceCost": 420,
+          "fuelConsumption": "7.6L/100km"
+        },
+        {
+          "name": "XLE",
+          "averagePrice": 27000,
+          "score": 4.7,
+          "image": "https://example.com/toyota_camry_xle.jpg",
+          "gearbox": "Automatic",
+          "engineVolume": "3.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 301,
+          "averageAnnualMaintenanceCost": 450,
+          "fuelConsumption": "8.2L/100km"
+        }
+      ]
+    },
+    "2015-2017": {
+      "configurations": [
+        {
+          "name": "L",
+          "averagePrice": 20000,
+          "score": 4.2,
+          "image": "https://example.com/toyota_camry_l.jpg",
+          "gearbox": "Automatic",
+          "engineVolume": "2.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 178,
+          "averageAnnualMaintenanceCost": 350,
+          "fuelConsumption": "7.9L/100km"
+        },
+        {
+          "name": "LE",
+          "averagePrice": 21000,
+          "score": 4.3,
+          "image": "https://example.com/toyota_camry_le.jpg",
+          "gearbox": "Automatic",
+          "engineVolume": "2.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 178,
+          "averageAnnualMaintenanceCost": 360,
+          "fuelConsumption": "8.0L/100km"
+        },
+        {
+          "name": "SE",
+          "averagePrice": 22000,
+          "score": 4.4,
+          "image": "https://example.com/toyota_camry_se.jpg",
+          "gearbox": "Automatic",
+          "engineVolume": "2.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 178,
+          "averageAnnualMaintenanceCost": 370,
+          "fuelConsumption": "8.1L/100km"
+        }
+      ]
+    }
+  },
+  "Civic": {
+    "2020-2022": {
+      "configurations": [
+        {
+          "name": "LX",
+          "averagePrice": 22000,
+          "score": 4.4,
+          "image": "https://example.com/honda_civic_lx.jpg",
+          "gearbox": "Manual",
+          "engineVolume": "2.0L",
+          "fuelType": "Gasoline",
+          "horsepower": 158,
+          "averageAnnualMaintenanceCost": 320,
+          "fuelConsumption": "6.9L/100km"
+        },
+        {
+          "name": "EX",
+          "averagePrice": 23000,
+          "score": 4.5,
+          "image": "https://example.com/honda_civic_ex.jpg",
+          "gearbox": "CVT",
+          "engineVolume": "1.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 174,
+          "averageAnnualMaintenanceCost": 330,
+          "fuelConsumption": "6.5L/100km"
+        },
+        {
+          "name": "Touring",
+          "averagePrice": 25000,
+          "score": 4.6,
+          "image": "https://example.com/honda_civic_touring.jpg",
+          "gearbox": "CVT",
+          "engineVolume": "1.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 174,
+          "averageAnnualMaintenanceCost": 340,
+          "fuelConsumption": "6.4L/100km"
+        }
+      ]
+    },
+    "2016-2019": {
+      "configurations": [
+        {
+          "name": "LX",
+          "averagePrice": 20000,
+          "score": 4.3,
+          "image": "https://example.com/honda_civic_lx.jpg",
+          "gearbox": "Manual",
+          "engineVolume": "2.0L",
+          "fuelType": "Gasoline",
+          "horsepower": 158,
+          "averageAnnualMaintenanceCost": 300,
+          "fuelConsumption": "7.0L/100km"
+        },
+        {
+          "name": "EX",
+          "averagePrice": 21000,
+          "score": 4.4,
+          "image": "https://example.com/honda_civic_ex.jpg",
+          "gearbox": "CVT",
+          "engineVolume": "1.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 174,
+          "averageAnnualMaintenanceCost": 310,
+          "fuelConsumption": "6.6L/100km"
+        },
+        {
+          "name": "Touring",
+          "averagePrice": 23000,
+          "score": 4.5,
+          "image": "https://example.com/honda_civic_touring.jpg",
+          "gearbox": "CVT",
+          "engineVolume": "1.5L",
+          "fuelType": "Gasoline",
+          "horsepower": 174,
+          "averageAnnualMaintenanceCost": 320,
+          "fuelConsumption": "6.5L/100km"
+        }
+      ]
+    }
+  }
+}

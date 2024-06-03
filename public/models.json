@@ -1,0 +1,8 @@
+{
+  "Toyota": ["Camry", "Corolla", "Prius"],
+  "Honda": ["Civic", "Accord", "CR-V"],
+  "Ford": ["F-150", "Escape", "Mustang"],
+  "Chevrolet": ["Silverado", "Equinox", "Malibu"],
+  "BMW": ["3 Series", "5 Series", "X5"],
+  "Mercedes": ["C-Class", "E-Class", "GLC"]
+}
