@@ -10,7 +10,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="adDetailsPopupLabel">
-            {{ ad.year }} {{ ad.make }} {{ ad.model }} ({{ ad.configuration }})
+            {{ ad.make }} {{ ad.model }} {{ ad.configuration }}({{ ad.year }})
           </h5>
           <button
             type="button"
@@ -21,13 +21,8 @@
         </div>
         <div class="modal-body">
           <div class="row mb-4">
-            <div class="">
-              <img :src="ad.image" class="img-fluid mb-3" alt="Car Image" />
-            </div>
-            <div class="d-flex flex-column justify-content-center">
-              <h3 class="text-primary">${{ ad.price }}</h3>
-              <p class="mb-1"><strong>Mileage:</strong> {{ ad.mileage }} miles</p>
-              <p class="mb-1"><strong>Location:</strong> {{ ad.location }}</p>
+            <div class="col-md-12">
+              <ImageCarousel :images="ad.images" />
             </div>
           </div>
           <h4>Basics</h4>
@@ -43,7 +38,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
           <button type="button" class="btn btn-primary" @click="callSeller">Call Seller</button>
         </div>
       </div>
@@ -52,6 +47,8 @@
 </template>
 
 <script>
+import ImageCarousel from './ImageCarousel.vue'
+
 export default {
   name: 'AdDetailsPopup',
   props: {
@@ -59,6 +56,9 @@ export default {
       type: Object,
       required: true
     }
+  },
+  components: {
+    ImageCarousel
   },
   computed: {
     fields() {
@@ -76,9 +76,6 @@ export default {
     callSeller() {
       // Logic to call the seller or open a dialer
       alert('Calling seller...')
-    },
-    resetAd() {
-      this.$emit('reset-ad')
     }
   }
 }
@@ -86,7 +83,7 @@ export default {
 
 <style scoped>
 .modal-body {
-  max-height: 80vh;
+  max-height: 70vh;
   overflow-y: auto;
 }
 </style>

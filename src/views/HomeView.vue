@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <h1>Available Cars</h1>
+    <h1>Best value</h1>
     <div class="row">
       <div v-for="(list, index) in carLists" :key="index" class="col-md-4 col-sm-6 mb-4">
         <CarList :title="'List ' + (index + 1)" :cars="list" />

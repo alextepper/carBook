@@ -1,14 +1,22 @@
 <template>
   <div class="car-list mb-4">
-    <h2>{{ title }}</h2>
+    <!-- <h2>{{ title }}</h2> -->
     <ul class="list-group">
       <li
-        v-for="car in cars"
+        v-for="(car, index) in cars"
         :key="car.id"
         class="list-group-item d-flex align-items-center position-relative"
         @click="navigateToCarProfile(car.id)"
       >
-        <img :src="car.image" alt="Car Image" class="img-thumbnail me-3" />
+        <h4>{{ index + 1 }}</h4>
+        <img
+          :src="
+            car.image ||
+            'https://www.meadowbrookventuresinc.com/wp-content/plugins/wp-car-manager/assets/images/placeholder-single.png'
+          "
+          alt="Car Image"
+          class="img-thumbnail mx-3"
+        />
         <div>
           <h5>{{ car.make }} {{ car.model }} ({{ car.year }})</h5>
           <p>~ ${{ car.price }}</p>

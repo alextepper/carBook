@@ -3,6 +3,7 @@
     <div v-if="car">
       <img :src="car.image" class="img-fluid mb-3" alt="Car Image" />
       <h2>{{ car.make }} {{ car.model }} ({{ car.generation }})</h2>
+      <p><strong>Average Price:</strong> ${{ car.averagePrice }}</p>
       <p><strong>Configuration:</strong> {{ car.configuration }}</p>
       <p><strong>Gearbox:</strong> {{ car.gearbox }}</p>
       <p><strong>Engine Volume:</strong> {{ car.engineVolume }}</p>
