@@ -7,6 +7,7 @@ import RegisterView from '../views/auth/RegisterView.vue'
 import ForgotPasswordView from '../views/auth/ForgotPasswordView.vue'
 import CreateAdView from '../views/CreateAdView.vue'
 import AdsListView from '../views/AdsListView.vue'
+import UserProfile from '../views/UserProfile.vue'
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/ads',
     name: 'AdsList',
     component: AdsListView
+  },
+  {
+    path: '/user-profile',
+    name: 'UserProfile',
+    component: UserProfile
   }
 ]
 

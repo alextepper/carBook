@@ -30,6 +30,9 @@
             <router-link class="nav-link" to="/create-ad">Create Ad</router-link>
           </li>
           <li class="nav-item">
+            <router-link class="nav-link" to="/user-profile">Profile</router-link>
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link" to="/login">Login</router-link>
           </li>
           <li class="nav-item">

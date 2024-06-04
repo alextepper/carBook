@@ -1,0 +1,36 @@
+{
+  "profilePic": "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
+  "firstName": "John",
+  "lastName": "Doe",
+  "location": "New York",
+  "score": 4.5,
+  "posts": 10,
+  "cars": [
+    {
+      "nickname": "Speedster",
+      "make": "Toyota",
+      "model": "Camry",
+      "generation": "2018-2022",
+      "configuration": "LE",
+      "year": 2020,
+      "mileage": 15000,
+      "images": [
+        "https://www.motortrend.com/uploads/sites/5/2020/06/2020-toyota-camry-hybrid-02.jpg",
+        "https://www.motortrend.com/uploads/sites/5/2020/06/2020-toyota-camry-hybrid-01.jpg"
+      ]
+    },
+    {
+      "nickname": "Beast",
+      "make": "Honda",
+      "model": "Civic",
+      "generation": "2020-2022",
+      "configuration": "LX",
+      "year": 2021,
+      "mileage": 5000,
+      "images": [
+        "https://i.gaw.to/vehicles/photos/40/22/402248-2021-honda-civic.jpg?640x400",
+        "https://i.gaw.to/vehicles/photos/40/22/402248-2021-honda-civic.jpg?640x400"
+      ]
+    }
+  ]
+}
