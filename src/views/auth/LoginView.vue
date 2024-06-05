@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { login } from '../../utils/api'
+
 export default {
   name: 'LoginView',
   data() {
@@ -27,8 +29,17 @@ export default {
   },
   methods: {
     login() {
-      // Implement login logic here
-      console.log('Logging in with', this.email, this.password)
+      login(this.email, this.password)
+        .then((response) => {
+          console.log(response)
+          // Save token and user data to localStorage
+          localStorage.setItem('token', response.data.token)
+          localStorage.setItem('user', JSON.stringify(response.data.data))
+        })
+        .catch((error) => {
+          console.error(error)
+          // Handle your error here
+        })
     }
   }
 }

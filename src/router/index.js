@@ -5,6 +5,7 @@ import BestReviewed from '../views/BestReviewed.vue'
 import LoginView from '../views/auth/LoginView.vue'
 import RegisterView from '../views/auth/RegisterView.vue'
 import ForgotPasswordView from '../views/auth/ForgotPasswordView.vue'
+import ResetPasswordView from '../views/auth/ResetPasswordView.vue'
 import CreateAdView from '../views/CreateAdView.vue'
 import AdsListView from '../views/AdsListView.vue'
 import UserProfile from '../views/UserProfile.vue'
@@ -54,7 +55,8 @@ const routes = [
     path: '/user-profile',
     name: 'UserProfile',
     component: UserProfile
-  }
+  },
+  { path: '/reset-password/:token', name: 'ResetPassword', component: ResetPasswordView }
 ]
 
 const router = createRouter({

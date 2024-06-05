@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { forgotPassword } from '../../utils/api'
+
 export default {
   name: 'ForgotPasswordView',
   data() {
@@ -21,8 +23,15 @@ export default {
   },
   methods: {
     forgotPassword() {
-      // Implement forgot password logic here
-      console.log('Resetting password for', this.email)
+      forgotPassword(this.email)
+        .then((response) => {
+          console.log(response)
+          // Handle success here, e.g. show a success message
+        })
+        .catch((error) => {
+          console.error(error)
+          // Handle error here, e.g. show an error message
+        })
     }
   }
 }
