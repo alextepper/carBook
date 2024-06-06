@@ -9,6 +9,7 @@ import ResetPasswordView from '../views/auth/ResetPasswordView.vue'
 import CreateAdView from '../views/CreateAdView.vue'
 import AdsListView from '../views/AdsListView.vue'
 import UserProfile from '../views/UserProfile.vue'
+import UserList from '../views/UserList.vue'
 
 const routes = [
   {
@@ -52,10 +53,12 @@ const routes = [
     component: AdsListView
   },
   {
-    path: '/user-profile',
+    path: '/user-profile/:userId',
     name: 'UserProfile',
     component: UserProfile
   },
+
+  { path: '/users', name: 'UserList', component: UserList },
   { path: '/reset-password/:token', name: 'ResetPassword', component: ResetPasswordView }
 ]
 

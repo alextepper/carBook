@@ -24,19 +24,30 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/ads">All Ads</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/users">Users</router-link>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
             <router-link class="nav-link" to="/create-ad">Create Ad</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/user-profile">Profile</router-link>
+          <li v-if="user" class="nav-item">
+            <router-link class="nav-link" :to="`/user-profile/${user.id}`">
+              <img
+                :src="user.image || 'https://via.placeholder.com/50'"
+                alt="Profile Image"
+                class="rounded-circle"
+                width="30"
+                height="30"
+              />
+            </router-link>
           </li>
-          <li class="nav-item">
+          <li v-if="user" class="nav-item">
+            <a class="nav-link" href="#" @click="logout">Logout</a>
+          </li>
+          <li v-else class="nav-item">
             <router-link class="nav-link" to="/login">Login</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/register">Register</router-link>
           </li>
         </ul>
       </div>
@@ -46,7 +57,23 @@
 
 <script>
 export default {
-  name: 'AppNavbar'
+  name: 'AppNavbar',
+  data() {
+    return {
+      user: null
+    }
+  },
+  created() {
+    this.user = JSON.parse(localStorage.getItem('user'))
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem('user')
+      localStorage.removeItem('token')
+      this.user = null
+      this.$router.push('/login')
+    }
+  }
 }
 </script>
 
@@ -56,5 +83,8 @@ export default {
 }
 .navbar-nav .nav-link:hover {
   color: #ccc;
+}
+.rounded-circle {
+  object-fit: cover;
 }
 </style>
