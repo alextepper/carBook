@@ -10,7 +10,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="adDetailsPopupLabel">
-            {{ ad.make }} {{ ad.model }} {{ ad.configuration }}({{ ad.year }})
+            {{ ad.configuration.make }} {{ ad.configuration.model }} {{ ad.configuration.name }} ({{
+              ad.year
+            }})
           </h5>
           <button
             type="button"
@@ -22,7 +24,7 @@
         <div class="modal-body">
           <div class="row mb-4">
             <div class="col-md-12">
-              <ImageCarousel :images="ad.images" />
+              <ImageCarousel :images="ad.pictures" />
             </div>
           </div>
           <h4>Basics</h4>
@@ -38,7 +40,6 @@
           </div>
         </div>
         <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
           <button type="button" class="btn btn-primary" @click="callSeller">Call Seller</button>
         </div>
       </div>
@@ -63,12 +64,12 @@ export default {
   computed: {
     fields() {
       return {
-        Gearbox: this.ad.gearbox,
-        'Engine Volume': this.ad.engineVolume,
-        'Fuel Type': this.ad.fuelType,
-        Horsepower: this.ad.horsepower,
-        'Annual Maintenance Cost': `$${this.ad.averageAnnualMaintenanceCost}`,
-        'Fuel Consumption': this.ad.fuelConsumption
+        Gearbox: this.ad.configuration.gearbox,
+        'Engine Volume': this.ad.configuration.engine,
+        'Fuel Type': this.ad.configuration.fuelType,
+        Horsepower: this.ad.configuration.power,
+        'Annual Maintenance Cost': `$${this.ad.configuration.averageAnnualMaintenanceCost}`,
+        'Fuel Consumption': this.ad.configuration.fuelConsumption
       }
     }
   },

@@ -3,6 +3,14 @@
     <h1>Register</h1>
     <form @submit.prevent="register">
       <div class="mb-3">
+        <label for="firstname" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstname" v-model="firstname" />
+      </div>
+      <div class="mb-3">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastname" v-model="lastname" />
+      </div>
+      <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
         <input type="email" class="form-control" id="email" v-model="email" required />
       </div>
@@ -21,6 +29,7 @@
         />
       </div>
       <button type="submit" class="btn btn-primary">Register</button>
+      <router-link to="/login" class="btn btn-link">Already have an account?</router-link>
     </form>
   </div>
 </template>
@@ -32,31 +41,33 @@ export default {
   name: 'RegisterView',
   data() {
     return {
-      firstname: 'max',
-      lastname: 'mustermann',
+      firstname: '',
+      lastname: '',
       email: '',
       password: '',
       confirmPassword: ''
     }
   },
   methods: {
-    register() {
+    async register() {
       if (this.password !== this.confirmPassword) {
         alert('Passwords do not match!')
         return
       }
 
-      register(this.firstname, this.lastname, this.email, this.password)
-        .then((response) => {
-          console.log(response)
-          // Save token and user data to localStorage
-          localStorage.setItem('token', response.data.token)
-          localStorage.setItem('user', JSON.stringify(response.data.data))
-        })
-        .catch((error) => {
-          console.error(error)
-          // Handle your error here
-        })
+      try {
+        const response = await register(this.firstname, this.lastname, this.email, this.password)
+        console.log(response)
+        // Save token and user data to localStorage
+        localStorage.setItem('token', response.data.token)
+        localStorage.setItem('user', JSON.stringify(response.data.data))
+        // Refresh navbar
+        this.$root.$emit('refreshNavbar')
+        this.$router.push(`/user-profile/${response.data.data.id}`)
+      } catch (error) {
+        console.error(error)
+        // Handle your error here
+      }
     }
   }
 }

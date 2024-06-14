@@ -12,6 +12,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Login</button>
       <router-link to="/forgot-password" class="btn btn-link">Forgot Password?</router-link>
+      <router-link to="/register" class="btn btn-link">Don't have an account yet?</router-link>
     </form>
   </div>
 </template>
@@ -35,6 +36,8 @@ export default {
           // Save token and user data to localStorage
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('user', JSON.stringify(response.data.data))
+          // Redirect to user profile page
+          this.$router.push(`/user-profile/${response.data.data.id}`)
         })
         .catch((error) => {
           console.error(error)

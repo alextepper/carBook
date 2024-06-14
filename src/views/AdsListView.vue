@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <h1>All Car Ads</h1>
     <div class="row">
-      <div v-for="ad in ads" :key="ad.id" class="col-lg-4 col-md-6 mb-4">
+      <div v-for="ad in ads" :key="ad._id" class="col-lg-3 col-md-4 mb-4">
         <AdCard :ad="ad" @openAdDetails="openAdDetails" />
       </div>
     </div>
@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import axios from 'axios'
 import AdDetailsPopup from '../components/AdDetailsPopup.vue'
 import AdCard from '../components/AdCard.vue'
 import { Modal } from 'bootstrap'
+import { api } from '@/utils/api'
 
 export default {
   name: 'AdsListView',
@@ -32,23 +32,14 @@ export default {
   },
   created() {
     this.fetchAds()
-    this.fetchConfigurations()
   },
   methods: {
     async fetchAds() {
       try {
-        const response = await axios.get('/ads.json')
-        this.ads = response.data
+        const response = await api('api/cars?isForSale=true')
+        this.ads = response.data.data
       } catch (error) {
         console.error('Error fetching ads:', error)
-      }
-    },
-    async fetchConfigurations() {
-      try {
-        const response = await axios.get('/configurations.json')
-        this.configurations = response.data
-      } catch (error) {
-        console.error('Error fetching configurations:', error)
       }
     },
     openAdDetails(ad) {

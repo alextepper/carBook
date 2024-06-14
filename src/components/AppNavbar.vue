@@ -30,7 +30,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link class="nav-link" to="/create-ad">Create Ad</router-link>
+            <a class="nav-link" href="#" @click="sellCar">Sell a Car</a>
           </li>
           <li v-if="user" class="nav-item">
             <router-link class="nav-link" :to="`/user-profile/${user.id}`">
@@ -52,12 +52,18 @@
         </ul>
       </div>
     </div>
+    <SellCarModal ref="sellCarModal" />
   </nav>
 </template>
 
 <script>
+import SellCarModal from './SellCarModal.vue'
+
 export default {
   name: 'AppNavbar',
+  components: {
+    SellCarModal
+  },
   data() {
     return {
       user: null
@@ -72,6 +78,13 @@ export default {
       localStorage.removeItem('token')
       this.user = null
       this.$router.push('/login')
+    },
+    sellCar() {
+      if (this.user) {
+        this.$refs.sellCarModal.show()
+      } else {
+        this.$router.push('/login')
+      }
     }
   }
 }

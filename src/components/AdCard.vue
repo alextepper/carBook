@@ -1,12 +1,12 @@
 <template>
   <div class="card h-100" @click="openAdDetails(ad)">
     <div class="position-absolute top-0 end-0 m-3 bg-dark p-1 rounded">
-      <span class="me-1 text-light">{{ ad.score.toFixed(1) }}</span>
+      <span class="me-1 text-light">{{ ad.configuration.score.toFixed(1) }}</span>
       <i class="bi bi-star-fill text-warning"></i>
     </div>
     <img
       :src="
-        ad.images[0] ||
+        ad.pictures[0] ||
         'https://www.meadowbrookventuresinc.com/wp-content/plugins/wp-car-manager/assets/images/placeholder-single.png'
       "
       class="card-img-top"
@@ -14,12 +14,14 @@
     />
     <div class="card-body">
       <h5 class="card-title">
-        {{ ad.make }} {{ ad.model }} {{ ad.configuration }} ({{ ad.year }})
+        {{ ad.configuration.make }} {{ ad.configuration.model }} {{ ad.configuration.name }} ({{
+          ad.year
+        }})
       </h5>
-      <p class="card-text">{{ ad.engineVolume }} {{ ad.gearbox }}</p>
+      <p class="card-text">{{ ad.configuration.engine }} {{ ad.configuration.gearbox }}</p>
       <p class="card-text">
         {{ ad.mileage }} miles<br />
-        {{ ad.location }}
+        <!-- {{ ad.description }} -->
       </p>
       <h5 class="card-text">${{ ad.price }}</h5>
     </div>
