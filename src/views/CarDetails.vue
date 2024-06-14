@@ -1,29 +1,17 @@
 <template>
   <div class="container mt-5">
     <div v-if="car">
-      <img :src="car.image" class="img-fluid mb-3" alt="Car Image" />
-      <h2>{{ car.make }} {{ car.model }} ({{ car.generation }})</h2>
+      <img :src="car.pictures[0]" class="img-fluid mb-3" alt="Car Image" />
+      <h2>{{ car.make }} {{ car.model }} ({{ car.generation.name }})</h2>
       <p><strong>Average Price:</strong> ${{ car.averagePrice }}</p>
-      <p><strong>Configuration:</strong> {{ car.configuration }}</p>
+      <p><strong>Configuration:</strong> {{ car.name }}</p>
       <p><strong>Gearbox:</strong> {{ car.gearbox }}</p>
-      <p><strong>Engine Volume:</strong> {{ car.engineVolume }}</p>
+      <p><strong>Engine:</strong> {{ car.engine }}</p>
       <p><strong>Fuel Type:</strong> {{ car.fuelType }}</p>
-      <p><strong>Horsepower:</strong> {{ car.horsepower }}</p>
-      <p>
-        <strong>Average Annual Maintenance Cost:</strong> ${{ car.averageAnnualMaintenanceCost }}
-      </p>
+      <p><strong>Horsepower:</strong> {{ car.power }}</p>
       <p><strong>Fuel Consumption:</strong> {{ car.fuelConsumption }}</p>
-
-      <h3 class="mt-5">Similar Cars</h3>
-      <div class="row">
-        <div
-          v-for="similarCar in similarCars"
-          :key="similarCar.id"
-          class="col-lg-3 col-md-4 col-sm-6 mb-4"
-        >
-          <CarCard :car="similarCar" />
-        </div>
-      </div>
+      <p><strong>Tax Category:</strong> {{ car.taxCategory }}</p>
+      <p><strong>Score:</strong> {{ car.score }}</p>
     </div>
     <div v-else>
       <p>Loading...</p>
@@ -32,18 +20,13 @@
 </template>
 
 <script>
-import axios from 'axios'
-import CarCard from '../components/CarCard.vue'
+import { api } from '@/utils/api'
 
 export default {
   name: 'CarDetails',
-  components: {
-    CarCard
-  },
   data() {
     return {
-      car: null,
-      similarCars: []
+      car: null
     }
   },
   created() {
@@ -51,12 +34,10 @@ export default {
   },
   methods: {
     async fetchCarDetails() {
-      // const carId = this.$route.params.id
+      const carId = this.$route.params.id
       try {
-        const response = await axios.get('/car.json')
-        const carData = response.data
-        this.car = carData.car
-        this.similarCars = carData.similarCars
+        const response = await api('api/configurations/' + carId)
+        this.car = response.data
       } catch (error) {
         console.error('Error fetching car details:', error)
       }

@@ -10,8 +10,8 @@
 </template>
 
 <script>
+import { api } from '@/utils/api'
 import CarList from '../components/CarList.vue'
-import axios from 'axios'
 
 export default {
   name: 'HomeView',
@@ -24,12 +24,12 @@ export default {
     }
   },
   created() {
-    this.fetchCarLists()
+    this.fetchConfigurations()
   },
   methods: {
-    async fetchCarLists() {
+    async fetchConfigurations() {
       try {
-        const response = await axios.get('/cars.json')
+        const response = await api('api/configurations')
         this.carLists = [response.data] // Adjust this line to group ads into lists if needed
       } catch (error) {
         console.error('Error fetching car lists:', error)

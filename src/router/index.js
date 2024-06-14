@@ -8,6 +8,7 @@ import ForgotPasswordView from '../views/auth/ForgotPasswordView.vue'
 import ResetPasswordView from '../views/auth/ResetPasswordView.vue'
 import CreateAdView from '../views/CreateAdView.vue'
 import AdsListView from '../views/AdsListView.vue'
+import AddCarView from '../views/AddCarView.vue'
 import UserProfile from '../views/UserProfile.vue'
 import UserList from '../views/UserList.vue'
 
@@ -46,6 +47,11 @@ const routes = [
     path: '/create-ad',
     name: 'CreateAd',
     component: CreateAdView
+  },
+  {
+    path: '/add-car',
+    name: 'AddCar',
+    component: AddCarView
   },
   {
     path: '/ads',

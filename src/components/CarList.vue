@@ -6,7 +6,7 @@
         v-for="(car, index) in cars"
         :key="car.id"
         class="list-group-item d-flex align-items-center position-relative"
-        @click="navigateToCarProfile(car.id)"
+        @click="navigateToCarProfile(car._id)"
       >
         <h4>{{ index + 1 }}</h4>
         <img
@@ -18,8 +18,8 @@
           class="img-thumbnail mx-3"
         />
         <div>
-          <h5>{{ car.make }} {{ car.model }} ({{ car.year }})</h5>
-          <p>~ ${{ car.price }}</p>
+          <h5>{{ car.make }} {{ car.model }} {{ car.name }} ({{ car.generation.name }})</h5>
+          <p>~ ${{ car.averagePrice }}</p>
         </div>
         <div class="score position-absolute top-0 end-0 m-2 d-flex align-items-center">
           <span class="me-1">{{ car.score.toFixed(1) }}</span>
